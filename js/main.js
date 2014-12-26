@@ -2,4 +2,4 @@ var main = function(){
 
 };
 
-$(dcoument).ready(main);
+$(document).ready(main);

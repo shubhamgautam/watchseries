@@ -1,9 +1,9 @@
 	/*start of the main css*/
 	
-	body{
-			background-color:#202020;
-			color:rgb(255, 170, 170);
-		}
+	
+	html {
+		font-family: GillSans, Calibri, Trebuchet, sans-serif;
+	}
 	div.main-list ul li{
 		text-decoration:none;
 		list-style-type: none;
@@ -11,9 +11,9 @@
 	a{
 		text-decoration: none;
 		color:rgb(255, 170, 170);
-		font-size:170%;
+		font-size:130%;
+		
 	}
-	
 	div.main-list{
 		width: 70%;
 		margin: 1% auto;
@@ -31,4 +31,16 @@
 	}
 	li.current a:before{
 		content:'-';
+	}
+	 nav{
+		background-color:#009688;
+	 }
+	div.card{
+		padding:5px 10px;
+	}
+	div.card a{
+		float:right;
+	}
+	div.card a:first-child{
+		float:left
 	}
