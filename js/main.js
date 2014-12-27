@@ -1,6 +1,6 @@
 var main = function(){
 	$.ajax({
-		url:'https://api.myjson.com/bins/24bbz'
+		url:'https://api.myjson.com/bins/1n61r'
 	}).done(function(response){
 		var data = response.data;
 		debugger;
