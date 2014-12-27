@@ -74,3 +74,16 @@
 	span.val{
 		color:#ffab40;
 	}
+	a.waves-effect{
+		font-size:100%;
+	}
+	li.focused{
+		background-color:#004D40;
+		color:white;
+	}
+	li.focused a{
+		color:white;
+	}
+	a.fel-luck{
+		position:fixed;
+	}

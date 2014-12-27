@@ -1,4 +1,6 @@
-NProgress.start() 
+NProgress.start();
+var constants={};
+
 var main = function(){
 	NProgress.inc()
 	$.ajax({
@@ -6,6 +8,7 @@ var main = function(){
 	}).done(function(response){
 		NProgress.set(0.7);
 		var data = response.data;
+		constants.length = data.length;
 		utils.appendTemplate(data);
 		utils.showFooter();	
 		NProgress.done()	
@@ -35,6 +38,17 @@ var addHandler= function(){
 			})
 		}
 	});
+	
+	
+	//feeling lucky logic
+	$('.fel-luck').click(function(){
+		$('.focused').removeClass('focused');
+		var rand = Math.floor(Math.random()*constants.length) + 1;
+		var focusElem = $($('#main li')[rand]);
+		$('#main li')[rand].scrollIntoView()
+		focusElem.addClass('focused');
+	});
+	
 };
 
 var utils ={
