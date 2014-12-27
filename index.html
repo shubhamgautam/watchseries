@@ -4,151 +4,72 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>TV Seies</title>	
-	<style>
-		body{
-			background-color:#202020;
-			color:rgb(255, 170, 170);
-		}
-		div.main-list ul li{
-			text-decoration:none;
-			list-style-type: none;
-		}
-		a{
-			text-decoration: none;
-			color:rgb(255, 170, 170);
-			font-size:170%;
-		}
-		
-		div.main-list{
-			width: 70%;
-			margin: 1% auto;
-		}
-		h2{
-			color: #808080;
-			box-shadow: 2px 2px 2px #808080;
-			display: inline-block;
-			padding-right:5px;
-		}
-		
-		li.current a{
-			color:#69F0AE;
-			
-		}
-		li.current a:before{
-			content:'-';
-		}
-	</style>
+	<meta name="description" content="list of popular movie series">
+	<link rel="stylesheet" href="lib/css/materialize.min.css">
+	<link rel="stylesheet" href="css/style.css">	
+	<link rel="stylesheet" href="lib/css/nprogress.css">	
+	<title>TV SERIES TO WATCH</title>	
 	
  </head>
  <body>
-	<h2>Must Watch TV Series List </h2>
-	<div class="main-list">
-		<ul>
-			<li>
-				<a href="http://www.imdb.com/title/tt0898266/?ref_=nv_sr_1">The Big Bang Theory </a>
-			</li>
-			<li>
-				<a href="http://www.imdb.com/title/tt2741602/?ref_=nv_sr_1">The Blacklist </a>
-			</li>
-			<li>
-				<a href="http://www.imdb.com/title/tt0944947/?ref_=nv_sr_1">Game of Thrones </a>
-			</li>
-			<li>
-				<a href="http://www.imdb.com/title/tt0773262/?ref_=nv_sr_1">Dexter </a>
-			</li>
-			<li class="current" title="me watching :)">
-				<a href="http://www.imdb.com/title/tt1632701/?ref_=nv_sr_1">Suits </a>
-			</li>
-			<li>
-				<a href="http://www.imdb.com/title/tt0455275/?ref_=nv_sr_1">Prison Break </a>
-			</li>
-			<li>
-				<a href="http://www.imdb.com/title/tt0903747/?ref_=nv_sr_1">Breaking Bad </a>
-			</li>
-			<li>
-				<a href="http://www.imdb.com/title/tt1520211/?ref_=nv_sr_1">The Walking Dead </a>
-			</li>
-			<li>
-				<a href="http://www.imdb.com/title/tt1124373/?ref_=nv_sr_1">Sons of Anarchy </a>
-			</li>
-			<li>
-				<a href="http://www.imdb.com/title/tt2193021/?ref_=nv_sr_1">Arrow </a>
-			</li>
-			<li>
-				<a href="http://www.imdb.com/title/tt0386676/?ref_=nv_sr_1">The Office  </a>
-			</li>
-			<li>
-				<a href="http://www.imdb.com/title/tt0412142/?ref_=nv_sr_1">House M.D. </a>
-			</li>
-			<li>
-				<a href="http://www.imdb.com/title/tt3749900/?ref_=nv_sr_1">Gotham </a>
-			</li>
-			<li>
-				<a href="http://www.imdb.com/title/tt2372162/?ref_=nv_sr_1">Orange Is the New Black </a>
-			</li>
-			<li>
-				<a href="http://www.imdb.com/title/tt2364582/?ref_=nv_sr_1">Agents of S.H.I.E.L.D.  </a>
-			</li>
-			<li>
-				<a href="http://www.imdb.com/title/tt0182576/?ref_=nv_sr_1">Family Guy </a>
-			</li>
-			<li>
-				<a href="http://www.imdb.com/title/tt0397306/?ref_=nv_sr_1">American Dad!  </a>
-			</li>
-			<li>
-				<a href="http://www.imdb.com/title/tt3205802/?ref_=nv_sr_1">How to Get Away with Murder  </a>
-			</li>
-			<li>
-				<a href="http://www.imdb.com/title/tt1475582/?ref_=nv_sr_1">Sherlock </a>
-			</li>
-			<li>
-				<a href="http://www.imdb.com/title/tt0185906/?ref_=nv_sr_1">Band of Brothers </a>
-			</li>
-			<li>
-				<a href="http://www.imdb.com/title/tt0108778/?ref_=nv_sr_1">Friends </a>
-			</li>
-			<li>
-				<a href="http://www.imdb.com/title/tt0460649/?ref_=nv_sr_1">How I Met Your Mother </a>
-			</li>
-			<li>
-				<a href="http://www.imdb.com/title/tt1796960/?ref_=nv_sr_1">Homeland </a>
-			</li>
-			<li>
-				<a href="http://www.imdb.com/title/tt0387199/?ref_=nv_sr_1">Entourage  </a>
-			</li>
-			<li>
-				<a href="http://www.imdb.com/title/tt1856010/?ref_=nv_sr_1">House of Cards  </a>
-			</li>
-			<li>
-				<a href="http://www.imdb.com/title/tt1405406/?ref_=nv_sr_1">The Vampire Diaries</a>
-			</li>
-			<li>
-				<a href="http://www.imdb.com/title/tt1358522/?ref_=nv_sr_1">White Collar</a>
-			</li>
-			<li>
-				<a href="http://www.imdb.com/title/tt2575988/?ref_=nv_sr_1">Silicon Valley</a>
-			</li>
-			<li>
-				<a href="http://www.imdb.com/title/tt2802850/?ref_=nv_sr_1">Fargo</a>
-			</li>
-			<li>
-				<a href="http://www.imdb.com/title/tt0306414/?ref_=nv_sr_1">The Wire </a>
-			</li>
+		
+	  <nav>
+		<div class="nav-wrapper">
+		  <a href="#" class="brand-logo right"></a>
+		  <ul id="nav-mobile" class="left side-nav">
+			<li><a href="#">WATCH THIS</a></li>
+		  </ul>
+		</div>
+	  </nav>
+	<div class="row">
+		<div class="main-list col s10" id="main">
 			
-			
-		</ul>
+			<ul>
+				
+			</ul>
+		</div>
+		<div class="col s2">
+			<a title="I am feeling lucky" class="waves-effect waves-light btn-large fel-luck"><i class="mdi-file-cloud left"></i>Feeling Lucky!</a>
+		</div>
 	</div>
+	
+	<footer class="hide">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Watch This</h5>
+            <p class="grey-text lighten-4">Watch what others are watching.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Find me</h5>
+            <li><a class="grey-text lighten-3" href="https://www.facebook.com/shubham.gautam">@facebook</a></li>
+            <li><a class="grey-text lighten-3" href="https://twitter.com/SHUBHCOOL1">@twitter</a></li>
+            <li><a class="grey-text lighten-3" href="https://github.com/shubhamgautam">@Github</a></li>
+            <li><a class="grey-text lighten-3" href="https://www.linkedin.com/profile/view?id=106270107">@linkedin</a></li>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright"> 
+			more updates are coming ...
+      </div>
+    </footer>  
+	
+	 <div id="modal1" class="modal" >
+	  </div>
+	
 	<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-43040716-2', 'auto');
-  ga('send', 'pageview');
+	  ga('create', 'UA-43040716-2', 'auto');
+	  ga('send', 'pageview');
 
-</script>
+	</script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="lib/js/materialize.min.js"></script>
+	<script src="lib/js/nprogress.js"></script>
+	<script src="js/main.min.js"></script>
  </body>
  </html>
-	
