@@ -49,6 +49,12 @@ var addHandler= function(){
 		focusElem.addClass('focused');
 	});
 	
+	//adding tooltip
+	$(document).ready(function(){
+    $('.tooltipped').tooltip({"delay": 50});
+  });
+       
+	
 };
 
 var utils ={
@@ -63,8 +69,8 @@ var utils ={
 		var template = '<li >'+
 				'<div class="card">'+
 					'<a href="#">'+data.name+'</a>'+
-					'<a href="#" showParam=false url="'+data.imdbLink+'"+ title="imdb rating: '+data.imdbRating+' " name="'+data.name+'"  class="showModal"><img src="img/imdb.jpg"></a>'+
-					'<a href="#" showParam=true url="'+data.rtLink+'" class="showModal" title="rotten tomatoes rating : '+data.rtRating+' "><img src="img/rt.jpg"></a>'+
+					'<a href="#" showParam=false url="'+data.imdbLink+'"+ data-position="bottom" data-tooltip="imdb rating: '+data.imdbRating+'"  name="'+data.name+'"  class="showModal tooltipped"><img src="img/imdb.jpg"></a>'+
+					'<a href="#" showParam=true url="'+data.rtLink+'" class="showModal tooltipped" data-position="bottom" data-tooltip="rotten tomatoes rating : '+data.rtRating+'"  ><img src="img/rt.jpg"></a>'+
 				'</div>'+
 			'</li>';
 		return template
