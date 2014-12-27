@@ -1,13 +1,32 @@
+NProgress.start() 
 var main = function(){
+	NProgress.inc()
 	$.ajax({
-		url:'https://api.myjson.com/bins/1n61r'
+		url:'https://api.myjson.com/bins/3uwf3'
 	}).done(function(response){
+		NProgress.set(0.7);
 		var data = response.data;
-		debugger;
 		utils.appendTemplate(data);
-		utils.showFooter();
-		
+		utils.showFooter();	
+		NProgress.done()	
+		addHandler();	
+			
 	})
+	
+	
+};  
+
+var addHandler= function(){
+	$('.showModal').click(function(){
+		var url= $(this).attr("url"),iframe=$('#modal1 iframe'),openParam=$(this).attr("showParam");
+		if(openParam === "true"){
+			iframe.html('');
+			iframe.attr("src",url);
+			$('#modal1').openModal();	
+		}else{
+			window.open(url);
+		}
+	});
 };
 
 var utils ={
@@ -22,8 +41,8 @@ var utils ={
 		var template = '<li >'+
 				'<div class="card">'+
 					'<a href="#">'+data.name+'</a>'+
-					'<a href="'+data.imdbLink+'"+ title="imdb rating: '+data.imdbRating+' "><img src="img/imdb.jpg"></a>'+
-					'<a href="'+data.rtLink+'" title="rotten tomatoes rating : '+data.rtRating+' "><img src="img/rt.jpg"></a>'+
+					'<a href="#" showParam=false url="'+data.imdbLink+'"+ title="imdb rating: '+data.imdbRating+' " class="showModal"><img src="img/imdb.jpg"></a>'+
+					'<a href="#" showParam=true url="'+data.rtLink+'" class="showModal" title="rotten tomatoes rating : '+data.rtRating+' "><img src="img/rt.jpg"></a>'+
 				'</div>'+
 			'</li>';
 		return template

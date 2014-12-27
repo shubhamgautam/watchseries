@@ -245,33 +245,54 @@
       "rtRating": "4.6/5",
       "rtLink": "http://www.rottentomatoes.com/tv/castle"
     },
-	{
+    {
       "name": "American Horror Story ",
       "imdbRating": "8.4",
       "imdbLink": "http://www.imdb.com/title/tt1844624/?ref_=nv_sr_1",
       "rtRating": "7.7",
       "rtLink": "http://www.rottentomatoes.com/tv/american-horror-story"
     },
-	{
+    {
       "name": "Mad Men",
       "imdbRating": "8.7",
       "imdbLink": "http://www.imdb.com/title/tt0804503/?ref_=fn_al_tt_1",
       "rtRating": "8.8",
       "rtLink": "http://www.rottentomatoes.com/tv/mad-men"
     },
-	{
+    {
       "name": "Boardwalk Empire ",
       "imdbRating": "8.7",
       "imdbLink": "http://www.imdb.com/title/tt0979432/?ref_=nv_sr_1",
-      "rtRating": "8.8",
-      "rtLink": "http://www.rottentomatoes.com/tv/modern-family"
+      "rtRating": "7.9",
+      "rtLink": "http://www.rottentomatoes.com/tv/boardwalk-empire"
     },
-	{
+    {
       "name": "Modern Family",
       "imdbRating": "8.7",
       "imdbLink": "http://www.imdb.com/title/tt1442437/?ref_=fn_al_tt_1",
       "rtRating": "8.8",
       "rtLink": "http://www.rottentomatoes.com/tv/modern-family"
+    },
+    {
+      "name": "Dexter ",
+      "imdbRating": "9.0",
+      "imdbLink": "http://www.imdb.com/title/tt0773262/?ref_=nv_sr_1",
+      "rtRating": "6.5",
+      "rtLink": "http://www.rottentomatoes.com/tv/dexte"
+    },
+    {
+      "name": "Elementary ",
+      "imdbRating": "8.0",
+      "imdbLink": "http://www.imdb.com/title/tt2191671/?ref_=fn_al_tt_1",
+      "rtRating": "3.7/5",
+      "rtLink": "http://www.rottentomatoes.com/tv/elementary"
+    },
+    {
+      "name": "The Mentalist",
+      "imdbRating": "8.1",
+      "imdbLink": "http://www.imdb.com/title/tt1196946/?ref_=nv_sr_1",
+      "rtRating": "4.2/5",
+      "rtLink": "http://www.rottentomatoes.com/tv/the-mentalist"
     }
   ]
 }
