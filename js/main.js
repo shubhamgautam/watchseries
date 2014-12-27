@@ -18,13 +18,21 @@ var main = function(){
 
 var addHandler= function(){
 	$('.showModal').click(function(){
-		var url= $(this).attr("url"),iframe=$('#modal1 iframe'),openParam=$(this).attr("showParam");
+		var url= $(this).attr("url"),modal=$('#modal1'),openParam=$(this).attr("showParam"),name=$(this).attr('name');
+		modal.empty();
 		if(openParam === "true"){
-			iframe.html('');
-			iframe.attr("src",url);
-			$('#modal1').openModal();	
+			modal.append(utils.frameTemplate(url));
+			modal.openModal();	
 		}else{
-			window.open(url);
+			modal.append(utils.preloaderTemp);
+			modal.openModal();	
+			name = name.split(' ').join('+');
+			$.ajax({
+				url:'http://www.omdbapi.com/?t='+name
+			}).done(function(response){		
+				modal.empty();
+				modal.append(utils.imdbTemplate(JSON.parse(response)));
+			})
 		}
 	});
 };
@@ -33,15 +41,15 @@ var utils ={
 	appendTemplate: function(data){
 		var me=this,main=$('#main ul');
 		for(var x in data){
-			var template = me.template(data[x]);
+			var template = me.cardTemplate(data[x]);
 			main.append(template)
 		}
 	},
-	template: function(data){
+	cardTemplate: function(data){
 		var template = '<li >'+
 				'<div class="card">'+
 					'<a href="#">'+data.name+'</a>'+
-					'<a href="#" showParam=false url="'+data.imdbLink+'"+ title="imdb rating: '+data.imdbRating+' " class="showModal"><img src="img/imdb.jpg"></a>'+
+					'<a href="#" showParam=false url="'+data.imdbLink+'"+ title="imdb rating: '+data.imdbRating+' " name="'+data.name+'"  class="showModal"><img src="img/imdb.jpg"></a>'+
 					'<a href="#" showParam=true url="'+data.rtLink+'" class="showModal" title="rotten tomatoes rating : '+data.rtRating+' "><img src="img/rt.jpg"></a>'+
 				'</div>'+
 			'</li>';
@@ -49,7 +57,46 @@ var utils ={
 	},
 	showFooter:function(){
 		$('footer').show();
+	},
+	frameTemplate: function(url){
+		return('<iframe height="100%" width="100%" src="'+url+'"></iframe>')
+	},
+	preloaderTemp: function(){
+		var template ='<div class="preloader-wrapper big active">'+
+						'<div class="spinner-layer spinner-blue">'+
+						'<div class="circle-clipper left">'+
+						'<div class="circle"></div>'+
+						'</div><div class="gap-patch">'+
+						'<div class="circle"></div>'+
+						'</div><div class="circle-clipper right">'+
+						'<div class="circle"></div>'+
+						'</div>'+
+					'</div>';
+		return template			
+	},
+	imdbTemplate: function(data){
+		var template = '<div class="col s12 m8 offset-m2 l6 offset-l3">'+
+						'<div class="card-panel grey lighten-5 z-depth-1">'+
+						'<div class="row">'+
+						'<div class="col s5">'+
+						'<img src="'+data.Poster+'" alt="" class=" responsive-img">' +
+					'</div>'+
+					'<div class="col s6">'+
+					  '<div class="row"><h3>'+data.Title+'</h3></div>'+
+					  '<div class="row">Genre: <span class="val">'+data.Genre+'</span></h3></div>'+
+					  '<div class="row">Rating: <span class="val">'+data.imdbRating+'</span></div>'+
+					  '<div class="row">imdb Votes: '+data.imdbVotes+'</div>'+
+					  '<br>'+
+					  '<p><b>Plot: </b> '+data.Plot+'</p>'
+					'</div>'
+				  '</div>'+
+				'</div>'+
+			  '</div>';
+		return template;	  
+  
+	
 	}
 }
+
 
 $(document).ready(main);
