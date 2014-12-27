@@ -44,3 +44,12 @@
 	div.card a:first-child{
 		float:left
 	}
+	footer.hide{
+		display:none;
+	}
+	footer{
+		background-color:#009688;
+	}
+	div.footer-copyright{
+		background-color: #00695C;
+	}

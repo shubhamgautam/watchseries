@@ -5,6 +5,7 @@ var main = function(){
 		var data = response.data;
 		debugger;
 		utils.appendTemplate(data);
+		utils.showFooter();
 		
 	})
 };
@@ -26,6 +27,9 @@ var utils ={
 				'</div>'+
 			'</li>';
 		return template
+	},
+	showFooter:function(){
+		$('footer').show();
 	}
 }
 
