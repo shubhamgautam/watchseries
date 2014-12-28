@@ -34,10 +34,13 @@ var addHandler= function(){
 				url:'http://www.omdbapi.com/?t='+name
 			}).done(function(response){		
 				//modal.empty();
+				modal.empty();
 				modal.append(utils.imdbTemplate(JSON.parse(response)));
+				$('#modal1 .tmplCls').show();
 				$('.tmplCls img').load(function(){
 					$('#modal1 .preloader-wrapper').hide();
-					$('#modal1 .tmplCls').show();
+					$(this).show();
+					
 				});
 			})
 		}
@@ -82,12 +85,15 @@ var utils ={
 	preloaderTemp: function(){
 		var template ='<div class="preloader-wrapper big active">'+
 						'<div class="spinner-layer spinner-blue">'+
-						'<div class="circle-clipper left">'+
-						'<div class="circle"></div>'+
-						'</div><div class="gap-patch">'+
-						'<div class="circle"></div>'+
-						'</div><div class="circle-clipper right">'+
-						'<div class="circle"></div>'+
+							'<div class="circle-clipper left">'+
+								'<div class="circle"></div>'+
+							'</div>'+
+						'</div'+	
+						'<div class="gap-patch">'+
+							'<div class="circle"></div>'+
+						'</div>'+
+						'<div class="circle-clipper right">'+
+							'<div class="circle"></div>'+
 						'</div>'+
 					'</div>';
 		return template			
@@ -97,7 +103,9 @@ var utils ={
 						'<div class="card-panel grey lighten-5 z-depth-1">'+
 						'<div class="row">'+
 						'<div class="col s5 ">'+
+						this.preloaderTemp()+
 						'<img src="'+data.Poster+'" alt="" class=" responsive-img">' +
+						
 					'</div>'+
 					'<div class="col s6">'+
 					  '<div class="row"><h3>'+data.Title+'</h3></div>'+
