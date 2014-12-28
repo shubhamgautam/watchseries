@@ -37,6 +37,7 @@ var addHandler= function(){
 				modal.empty();
 				modal.append(utils.imdbTemplate(JSON.parse(response)));
 				$('#modal1 .tmplCls').show();
+				$('.tmplCls img').hide();
 				$('.tmplCls img').load(function(){
 					$('#modal1 .preloader-wrapper').hide();
 					$(this).show();
