@@ -293,6 +293,13 @@
       "imdbLink": "http://www.imdb.com/title/tt1196946/?ref_=nv_sr_1",
       "rtRating": "4.2/5",
       "rtLink": "http://www.rottentomatoes.com/tv/the-mentalist"
+    },
+    {
+      "name": "The Mentalist",
+      "imdbRating": "8.1",
+      "imdbLink": "http://www.imdb.com/title/tt1196946/?ref_=nv_sr_1",
+      "rtRating": "4.2/5",
+      "rtLink": "http://www.rottentomatoes.com/tv/the-mentalist"
     }
   ]
 }
