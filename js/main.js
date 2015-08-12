@@ -10,14 +10,14 @@ var main = function(){
 		var data = response.data;
 		constants.length = data.length;
 		utils.appendTemplate(data);
-		utils.showFooter();	
-		NProgress.done()	
-		addHandler();	
-			
+		utils.showFooter();
+		NProgress.done()
+		addHandler();
+
 	})
-	
-	
-};  
+
+
+};
 
 var addHandler= function(){
 	$('.showModal').click(function(){
@@ -25,14 +25,14 @@ var addHandler= function(){
 		modal.empty();
 		if(openParam === "true"){
 			modal.append(utils.frameTemplate(url));
-			modal.openModal();	
+			modal.openModal();
 		}else{
 			modal.append(utils.preloaderTemp);
-			modal.openModal();	
+			modal.openModal();
 			name = name.split(' ').join('+');
 			$.ajax({
 				url:'http://www.omdbapi.com/?t='+name
-			}).done(function(response){		
+			}).done(function(response){
 				//modal.empty();
 				modal.empty();
 				modal.append(utils.imdbTemplate(JSON.parse(response)));
@@ -41,13 +41,13 @@ var addHandler= function(){
 				$('.tmplCls img').load(function(){
 					$('#modal1 .preloader-wrapper').hide();
 					$(this).show();
-					
+
 				});
 			})
 		}
 	});
-	
-	
+
+
 	//feeling lucky logic
 	$('.fel-luck').click(function(){
 		$('.focused').removeClass('focused');
@@ -56,7 +56,7 @@ var addHandler= function(){
 		$('#main li')[rand].scrollIntoView()
 		focusElem.addClass('focused');
 	});
-	
+
 };
 
 var utils ={
@@ -68,6 +68,7 @@ var utils ={
 		}
 	},
 	cardTemplate: function(data){
+		debugger;
 		var template = '<li >'+
 				'<div class="card">'+
 					'<a href="#">'+data.name+'</a>'+
@@ -89,7 +90,7 @@ var utils ={
 							'<div class="circle-clipper left">'+
 								'<div class="circle"></div>'+
 							'</div>'+
-						'</div'+	
+						'</div'+
 						'<div class="gap-patch">'+
 							'<div class="circle"></div>'+
 						'</div>'+
@@ -97,7 +98,7 @@ var utils ={
 							'<div class="circle"></div>'+
 						'</div>'+
 					'</div>';
-		return template			
+		return template
 	},
 	imdbTemplate: function(data){
 		var template = '<div class="col s12 m8 tmplCls offset-m2 l6 offset-l3" style="display:none">'+
@@ -106,7 +107,7 @@ var utils ={
 						'<div class="col s5 ">'+
 						this.preloaderTemp()+
 						'<img src="'+data.Poster+'" alt="" class=" responsive-img">' +
-						
+
 					'</div>'+
 					'<div class="col s6">'+
 					  '<div class="row"><h3>'+data.Title+'</h3></div>'+
@@ -119,9 +120,9 @@ var utils ={
 				  '</div>'+
 				'</div>'+
 			  '</div>';
-		return template;	  
-  
-	
+		return template;
+
+
 	}
 }
 
